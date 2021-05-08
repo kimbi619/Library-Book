@@ -1,0 +1,157 @@
+.loginContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background: #0a0721a4;
+    font-family: 'montserrat light';
+}
+.loginContainer form{
+    background: #f1f1f1;
+    width: 90%;
+    max-width: 450px;
+    padding: 3em 0px;
+    z-index: 2;
+}
+
+
+.inputWrapper{
+    width: 80%;
+    height: 2.2em;
+    margin: auto;
+    position: relative;
+}
+.inputAnimator{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: transparent;
+    border-bottom: 1.3px solid #707070;
+    pointer-events: none;
+    overflow: hidden;
+}
+.inputAnimator::after{
+    top: 95%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    content: '';
+    background: #1D93FB;
+    position: absolute;
+    transform: translateX(-100%);
+    transition: all .2s ease-out;
+    z-index: 3000;
+}
+.animate .inputAnimator{
+    border: none;
+    padding-bottom: 2px;
+}
+.animate .inputAnimator::after{
+    transform: translateX(0);
+}
+
+
+
+
+
+
+.loginContainer input{
+    outline: none;
+    border: none;
+    padding: .5em .5em .2em;
+    font-size: 1rem;
+    margin: .5em auto;
+    width: 95%;
+    display: block;
+    color: #555;
+    background: #f1f1f1; 
+}
+
+input::placeholder{
+    font-family: 'montserrat light';
+    color: #0A0721;
+    font-size: .8em;
+}
+
+.loginContainer .login{
+    height: 2.7em;
+    border-bottom: none;
+    border-radius: 40px;
+    -webkit-appearance: none;
+    box-shadow: -.6em -.6em .4em #ffffff9d, .5em .4em .4em #0a072132;
+    margin: 2em auto;
+    font-size: 1.1rem;
+    transition: all .3s ease-in;
+    width: 80%;
+    border: none;
+}
+.loginContainer .login:hover{
+    background: #e9e9e9;
+    color: #251c79;
+}
+
+.loginContainer .title{
+    background: none;
+    font-size: 1.3em;
+    font-family: 'montserrat';
+    width: 80%;
+    margin: auto;
+}
+.oath{
+    width: 80%;
+    margin: 1em auto;
+    display: flex;
+    justify-content: center;
+}
+.oath div{
+    padding: .8em;
+    cursor: default;
+}
+
+.forgotpsd{
+    text-align: center;
+    font-style: italic;
+    font-size: .9rem;
+}
+
+.forgotpsd a{
+    color: #1D93FB;
+    background: none;
+    text-decoration: none;
+}
+.create{
+    font-size: .7rem;
+    font-style: italic;
+    margin: 6px 0px;
+}
+.create a{
+    text-decoration: underline;
+}
+
+.login-shadow{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: default;
+}
+
+
+
+
+/* --------------------specification for signup====================== */
+.signup form{
+    max-width: 400px;
+}
+.signup .forgotpsd{
+    font-size: .85rem;
+}
+

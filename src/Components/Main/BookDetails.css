@@ -1,0 +1,128 @@
+:root{
+    --primaryColor: #061233;
+    --border: 1.4px solid var(--primaryColor);
+}
+.clickedBook{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: white;
+    color: var(--primaryColor);
+    width: 70%;
+    max-width: 700px;
+    min-height: 230px;
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.bookToLoan{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+.show{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.shadow{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.438);
+}
+
+.imgContainer{
+    width: 40%;
+}
+.imgWrapper{
+    width: 150px;
+    height: 170px;
+    position: relative;
+    border: 1px solid black;
+    background: url('./img/1.jpeg'), #06123363 no-repeat center;
+    background-size: cover;
+}
+.imgWrapper img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+}
+.bookContentWrapper{
+    width: 70%;
+    padding-right: 2em;
+    float: left;
+    font-family: 'montserrat';
+}
+.bookContentWrapper h2{
+    text-transform: uppercase;
+    font-size: 1.2em;
+    padding: 0;
+    margin: 5px;
+}
+.author{
+    font-size: 1.1em;
+}
+.placeholder{
+    text-transform: capitalize;
+    font-weight: 500;
+    padding-right: 10px;
+}
+.desc{
+    text-transform: capitalize;
+    font-weight: 300;
+    font-family: 'dancing';
+}
+#loanForm{
+    padding: 10px 0px 10px;
+}
+form .state{
+    border-bottom: 1.4px solid var(--primaryColor);
+    padding-bottom: 7px;
+}
+.state{
+    font-size: .9em;
+}
+.input, #date{
+    border: none;
+    outline: none;
+    padding: .5em;
+    display: block;
+    margin: 10px 0px;
+    width: 100%;
+    border-bottom: var(--border);
+}
+#loanForm input::placeholder{
+    font-size: 1.3em;
+}
+#date{
+    /* width: 200px; */
+    border: var(--border);
+    margin: 20px 0px 10px;
+}
+
+.loanBtn{
+    outline: none;
+    border: none;
+    padding: 5px;
+    margin: .3em 0em;
+    color: white;
+    background: rgb(11, 78, 11);
+    border-radius: 20px;
+    float: right;
+    font-family: 'montserrat light';
+    font-size: 1.2em;
+    width: 200px;
+    
+}
