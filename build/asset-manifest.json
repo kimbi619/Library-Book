@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Library-Book.git/static/css/main.13624e95.chunk.css",
+    "main.js": "/Library-Book.git/static/js/main.91ba5ef4.chunk.js",
+    "main.js.map": "/Library-Book.git/static/js/main.91ba5ef4.chunk.js.map",
+    "runtime-main.js": "/Library-Book.git/static/js/runtime-main.362af2b3.js",
+    "runtime-main.js.map": "/Library-Book.git/static/js/runtime-main.362af2b3.js.map",
+    "static/js/2.66d30c77.chunk.js": "/Library-Book.git/static/js/2.66d30c77.chunk.js",
+    "static/js/2.66d30c77.chunk.js.map": "/Library-Book.git/static/js/2.66d30c77.chunk.js.map",
+    "static/js/3.fe84cf4d.chunk.js": "/Library-Book.git/static/js/3.fe84cf4d.chunk.js",
+    "static/js/3.fe84cf4d.chunk.js.map": "/Library-Book.git/static/js/3.fe84cf4d.chunk.js.map",
+    "index.html": "/Library-Book.git/index.html",
+    "static/css/main.13624e95.chunk.css.map": "/Library-Book.git/static/css/main.13624e95.chunk.css.map",
+    "static/js/2.66d30c77.chunk.js.LICENSE.txt": "/Library-Book.git/static/js/2.66d30c77.chunk.js.LICENSE.txt",
+    "static/media/BookDetails.css": "/Library-Book.git/static/media/1.b9dac48f.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.362af2b3.js",
+    "static/js/2.66d30c77.chunk.js",
+    "static/css/main.13624e95.chunk.css",
+    "static/js/main.91ba5ef4.chunk.js"
+  ]
+}
