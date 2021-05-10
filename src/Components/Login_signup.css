@@ -10,6 +10,7 @@
     background: #0a0721a4;
     font-family: 'montserrat light';
 }
+
 .loginContainer form{
     background: #f1f1f1;
     width: 90%;
@@ -38,10 +39,10 @@
     overflow: hidden;
 }
 .inputAnimator::after{
-    top: 95%;
+    bottom: 0%;
     left: 0;
     width: 100%;
-    height: 4px;
+    height: 2px;
     content: '';
     background: #1D93FB;
     position: absolute;
@@ -55,6 +56,9 @@
 }
 .animate .inputAnimator::after{
     transform: translateX(0);
+}
+.warnBorder .inputAnimator::after{
+    background: red;
 }
 
 
@@ -144,6 +148,107 @@ input::placeholder{
     cursor: default;
 }
 
+.showPassword, .wrongPassword{
+    width: 30px;
+    height: 30px;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    font-size: 1.1em;
+}
+.showPassword *{
+    pointer-events: none;
+}
+.wrongPassword{
+    transform: translateX(-35px);
+    pointer-events: none;
+    color: red;
+    visibility: hidden;
+}
+
+.inputText{
+    visibility: hidden;
+    transform: translateX(0);
+}
+.nameWarn{
+    font-size: .7rem;
+    font-style: italic;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-100%, 50%);
+    width: auto;
+    white-space: nowrap;
+}
+
+
+
+/* custom styling for login buttons  */
+.fb-btn, .btn-google, .git-btn{
+    background: #395693;
+    width: 6em;
+    height: 2.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    box-shadow: .25em .25em .8em #0a072144;
+    margin: 0px 10px;
+}
+.fb-btn img{
+    height: 60%;
+}
+.btn-google, .git-btn{
+    background: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    position: relative;
+}
+.btn-google svg{
+    font-size: 1.6rem;
+    color: #395693;
+}
+/* end of style of buttons for google facebook and github */
+
+
+
+
+  /* =========================Tooltip funtionality================ */
+  .showPassword .tooltiptext {
+    visibility: hidden;
+    background-color: #616070;
+    font-size: .7rem;
+    font-style: italic;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 1.3em;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    z-index: 3;
+  }
+  
+  .showPassword .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #616070 transparent;
+  }
+  .showPassword:hover .tooltiptext {
+    visibility: visible;
+  }
+/* ===============end of Tooltip functionality===== */
 
 
 
@@ -154,4 +259,6 @@ input::placeholder{
 .signup .forgotpsd{
     font-size: .85rem;
 }
+
+
 

@@ -1,23 +1,22 @@
 import './App.css';
 import NavBar from './Components/NavBar';
 import Main from './Components/Main';
-import {useState, useContext } from 'react'
-import { BookContextProvider } from './Components/Main/BookContext'
-import TestResize from './Components/TestResize';
+import { BookContextProvider } from './Components/Main/BookContext';
+import { SearchContextProvider } from './Components/SearchContext';
 
 function App() {
 
- 
-
   return (
-    <BookContextProvider>
-      <div className="App">
-        <NavBar />
-        <Main />
-      </div>
-    </BookContextProvider>
-    // <TestResize />
+    // <SearchContextProvider>
+      <BookContextProvider>
+        <div className="App">
+          <NavBar />
+          <Main />
+        </div>
+      </BookContextProvider>
+    // </SearchContextProvider>
   );
+  
 }
 
 export default App;
