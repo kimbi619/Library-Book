@@ -12,6 +12,7 @@
     "react-facebook-login": "^4.1.1",
     "react-github-login": "^1.0.3",
     "react-google-login": "^5.2.2",
+    "react-hook-form": "^7.5.1",
     "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
