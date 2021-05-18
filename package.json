@@ -8,6 +8,7 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.0",
     "react": "^17.0.1",
+    "react-chatbot-kit": "^1.1.20",
     "react-dom": "^17.0.1",
     "react-facebook-login": "^4.1.1",
     "react-github-login": "^1.0.3",

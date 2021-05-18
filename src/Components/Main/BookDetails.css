@@ -47,8 +47,6 @@
     width: 150px;
     height: 170px;
     position: relative;
-    border: 1px solid black;
-    background: url('./img/1.jpeg'), #06123363 no-repeat center;
     background-size: cover;
 }
 .imgWrapper img{

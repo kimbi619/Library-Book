@@ -19,31 +19,76 @@ const validateForm = (e)=>{
     e.preventDefault();
     const formTarget = e.target;
     const inputs = formTarget.querySelectorAll('input');
-    const lowerBorder1 = inputs[0].parentElement;
     if(inputs[0].value === ''){
+        
         const showError = inputs[0].nextElementSibling;
-        inputs[0].nextElementSibling.style.visibility = "visible"
-        showError.parentElement.classList.add('warnBorder')
+        inputs[0].nextElementSibling.style.visibility = "visible";
+        showError.parentElement.classList.add('warnBorder');
         setTimeout(()=>{
-            inputs[0].nextElementSibling.style.visibility = "hidden"
-            showError.parentElement.classList.remove('warnBorder')
-            lowerBorder1.classList.add('animate');
+            inputs[0].nextElementSibling.style.visibility = "hidden";
+            showError.parentElement.classList.remove('warnBorder');
+            inputs[0].parentElement.classList.add('animate');
             
         }, 2000)
         inputs[0].focus();
     }
-    if(inputs[1].value === ''){
-        const showError = inputs[1].nextElementSibling.nextElementSibling;
-        showError.style.visibility = "visible";
-        showError.parentElement.classList.add('warnBorder')
+
+
+    // perform regular expression on email field to check if it is valid
+
+    else if(inputs[1].value === ''){
+        const showError = inputs[1].nextElementSibling;
+        inputs[1].nextElementSibling.style.visibility = "visible";
+        showError.parentElement.classList.add('warnBorder');
+        inputs[1].parentElement.classList.add('animate');
         setTimeout(()=>{
-            showError.style.visibility = "hidden"
-            showError.parentElement.classList.remove('warnBorder')
-            lowerBorder1.classList.add('animate');
-            showError.parentElement.classList.remove('warnBorder')
+            inputs[1].nextElementSibling.style.visibility = "hidden";
+            showError.parentElement.classList.remove('warnBorder');
+            
         }, 2000)
         inputs[1].focus();
     }
+
+    else if(inputs[2].value === ''){
+        const showError = inputs[2].nextElementSibling.nextElementSibling;
+        showError.style.visibility = "visible";
+        showError.parentElement.classList.add('warnBorder');
+        inputs[1].parentElement.classList.add('animate');
+        setTimeout(()=>{
+            showError.style.visibility = "hidden"
+            showError.parentElement.classList.remove('warnBorder')
+            // lowerBorder1.classList.add('animate');
+            showError.parentElement.classList.remove('warnBorder')
+        }, 2000)
+        inputs[2].focus();
+    }
+
+    else if(inputs[3].value === ''){
+        const showError = inputs[3].nextElementSibling.nextElementSibling;
+        showError.style.visibility = "visible";
+        showError.parentElement.classList.add('warnBorder');
+        inputs[3].parentElement.classList.add('animate');
+        setTimeout(()=>{
+            showError.style.visibility = "hidden"
+            showError.parentElement.classList.remove('warnBorder')
+            // lowerBorder1.classList.add('animate');
+            showError.parentElement.classList.remove('warnBorder')
+        }, 2000)
+        inputs[3].focus();
+    }
+
+    if(inputs[2].value !== inputs[3].value){
+        const showError = inputs[3].nextElementSibling.nextElementSibling;
+        showError.style.visibility = "visible";
+        showError.parentElement.classList.add('warnBorder');
+        inputs[3].parentElement.classList.add('animate');
+        setTimeout(()=>{
+            showError.style.visibility = "hidden"
+            showError.parentElement.classList.remove('warnBorder')
+            showError.parentElement.classList.remove('warnBorder')
+        }, 2000)
+    }
+    
 }
 
 
@@ -82,17 +127,18 @@ const Signup = () => {
         <form method="POST" onSubmit={validateForm}>
             <div className="title">Please login to continue...</div>
             <div className="inputWrapper">
-                <input onFocus={animate} type="text" name ="u_name" autoComplete="off" placeholder="enter name..."/>
+                <input onFocus={animate} type="text" name ="u_name" autoComplete="on" placeholder="enter name..."/>
                 <div className="wrongPassword inputText"><span className="nameWarn">please enter name</span><FaExclamationTriangle /></div>
                 <div className="inputAnimator"></div>
             </div>
             <div className="inputWrapper">
-                <input onFocus={animate} type="mail" name ="u_name" autoComplete="off" placeholder="enter email..."/>
-                <div className="wrongPassword inputText"><span className="nameWarn">please enter name</span><FaExclamationTriangle /></div>
+                <input onFocus={animate} type="mail" name ="u_email" autoComplete="on" placeholder="enter email..."/>
+                <div className="wrongPassword inputText"><span className="nameWarn">please enter your email</span><FaExclamationTriangle /></div>
                 <div className="inputAnimator"></div>
             </div>
+            
             <div className="inputWrapper">
-                <input onFocus={animate} type="password" name ="u_psd" placeholder="enter password..."/>
+                <input onFocus={animate} type="password" name ="u_psd" placeholder="password..."/>
                 <div onClick = {showPassword}  className="showPassword">{showingPsd?<FaEyeSlash />:<FaEye />}<span className="tooltiptext">{toolTip?'hide':'show'}</span></div>
                 <div className="wrongPassword"><FaExclamationTriangle /></div>
                 <div className="inputAnimator"></div>
@@ -100,15 +146,22 @@ const Signup = () => {
             <div className="inputWrapper">
                 <input onFocus={animate} type="password" name ="confirm_u_psd" placeholder="confirm password..."/>
                 <div onClick = {showPassword}  className="showPassword">{showingPsd?<FaEyeSlash />:<FaEye />}<span className="tooltiptext">{toolTip?'hide':'show'}</span></div>
+                <div className="wrongPassword inputText"><span className="nameWarn">passwords don't match...</span><FaExclamationTriangle /></div>
                 <div className="wrongPassword"><FaExclamationTriangle /></div>
                 <div className="inputAnimator"></div>
             </div>
+
+
             <div>
                 <Oath />
             </div>
             <input type="submit" className="login" value="Sign up"/>
             <div className="forgotpsd">Already have an account?
             <Link to="/login"> click here</Link> to login</div>
+            <div className="forgotpsd create">by signing up you agree to our
+                <Link to="/create-account"> privacy policies</Link> and our <br />
+                <Link to="/create-account"> terms and conditions</Link>
+            </div>
         </form>
     </div>
     )

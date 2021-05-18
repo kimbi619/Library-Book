@@ -1,5 +1,7 @@
 import {useEffect} from 'react';
 import {Link} from 'react-router-dom';
+import e from './img/3.jpeg'
+
 function MainPanel(){
 
     useEffect(() => {
@@ -57,7 +59,7 @@ function MainPanel(){
                     <span className ="fxn"><Link to = '/create-account'>Create account</Link></span>
                     <span className ="fxn"><Link to = '/login'>Log In</Link></span>
                     <div className ="fxn user">
-                        <div className="me-icon">img</div>
+                        <div className="me-icon"><img src={e} alt="user"></img></div>
                         <div className="name-pseudo">
                             <p className="name">Asgaurd Man</p>
                             <p className="pseudo"><i>@risenagain</i></p>

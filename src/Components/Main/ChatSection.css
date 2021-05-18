@@ -1,0 +1,105 @@
+.chatSection{
+    position: relative;
+    background: #E4E4E4;
+    width: 40%;
+    margin: 0px auto;
+    padding: 2em;
+    z-index: 1;
+    margin: 0px 0% 0px 4em;
+    border-left: .1em solid #0A0721;
+    border-right: .1em solid #0A0721;
+    /* overflow: scroll; */
+}
+
+.inputSection{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 0px;
+    flex-direction: column;
+}
+
+.inputSection textarea{
+    outline: none;
+    border: none;
+    width: 90%;
+    max-width: 120em;
+    max-height: 50px;
+    margin: 0px 5px;
+    font-family: 'montserrat light';
+    border-radius: .7em;
+    resize: none;
+    border: 1.4px solid #949494;
+    padding: .5em;
+    z-index: 100;
+    
+}
+textarea::placeholder{
+    font-style: italic;
+    font-style: .8rem;
+}
+#textSubmit{
+    outline: none;
+    border: none;
+    font-family: 'montserrat';
+    font-weight: bold;
+    color: #E4E4E4;
+    background: #0A0721;
+    font-size: .9em;
+    width: 8em;
+    margin: 10px 0px 0px;
+    height: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+.chat{
+    background: white;
+    position: relative;
+    /* min-height: 60px; */
+    min-width: 120px;
+    width: auto;
+    max-width: 200px;
+    padding: 1em;
+    display: grid;
+    align-items: center;
+    border-radius: 0px 7px 7px 7px;
+    font-size: .8em;
+    font-style: italic;
+    margin: 0em 0em 1.2em 0px;
+}
+.chat::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 17px solid white;
+    border-left: 17px solid transparent;
+    transform: translateX(-100%);
+}
+.mySend .chat{
+    background: #C3C7F9;
+    border-radius: 7px 0px 7px 7px;
+    float: right;
+    clear: both;
+}
+
+.mySend .chat::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border-top: 17px solid #C3C7F9;
+    border-right: 17px solid transparent;
+    border-left: white;
+    transform: translateX(0%);
+}

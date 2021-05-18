@@ -2,6 +2,7 @@ import './BookDetails.css';
 import PropTypes from 'prop-types';
 import {useContext, useEffect} from 'react';
 import {BookHoldContext} from './BookHoldContext';
+import defaultLogo from './img/Asguard.png';
 
 
 const BookDetail = () => {
@@ -49,7 +50,7 @@ const BookDetail = () => {
             <div className="shadow" onClick={()=>bookItem.isClicked=false}></div>
             <div className="clickedBook">
                 <div className="imgContainer"> 
-                    <div className="imgWrapper"><img src="./img/1.jpeg" alt="default"/></div>
+                    <div className="imgWrapper"><img src={defaultLogo} alt="default"/></div>
                 </div>
                 <div className="bookContentWrapper">
                     <h2><span className="placeholder">Title:</span>{bookItem.title}</h2>
