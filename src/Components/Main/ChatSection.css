@@ -11,6 +11,11 @@
     /* overflow: scroll; */
 }
 
+@media(max-width: 1000px){
+    .chatSection{
+        width: 60%;
+    }
+}
 .inputSection{
     width: 100%;
     position: absolute;
@@ -63,17 +68,18 @@ textarea::placeholder{
     position: relative;
     /* min-height: 60px; */
     min-width: 120px;
-    width: auto;
     max-width: 200px;
-    padding: 1em;
+    padding: .5em .8em;
     display: grid;
     align-items: center;
-    border-radius: 0px 7px 7px 7px;
+    border-radius: 0px 12px 12px 12px;
     font-size: .8em;
     font-style: italic;
-    margin: 0em 0em 1.2em 0px;
+    font-family: 'ubuntu bold';
+    color: rgb(68, 66, 66);
+    margin: 0em 0em 1em 0px;
 }
-.chat::after{
+/* .chat::after{
     content: "";
     position: absolute;
     top: 0;
@@ -83,7 +89,7 @@ textarea::placeholder{
     border-top: 17px solid white;
     border-left: 17px solid transparent;
     transform: translateX(-100%);
-}
+} */
 .mySend .chat{
     background: #C3C7F9;
     border-radius: 7px 0px 7px 7px;
@@ -91,7 +97,7 @@ textarea::placeholder{
     clear: both;
 }
 
-.mySend .chat::after{
+/* .mySend .chat::after{
     content: "";
     position: absolute;
     top: 0;
@@ -102,4 +108,12 @@ textarea::placeholder{
     border-right: 17px solid transparent;
     border-left: white;
     transform: translateX(0%);
+} */
+
+.time{
+    font-size: .65rem;
+    position: sticky;
+    bottom: 5%;
+    right: 5%;
+    color: gray;
 }

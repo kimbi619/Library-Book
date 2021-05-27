@@ -12,7 +12,7 @@ const animate = (e)=>{
 
     // --------validate form data at front end
     
-    
+
 let isFormValid = false
 const validateForm = (e)=>{
     // -------prevent form from submiting
@@ -90,6 +90,8 @@ const validateForm = (e)=>{
         }
 
 
+   
+        
     return (
         <div className="loginContainer">
             <Link to="/"><div className="login-shadow"></div></Link>

@@ -1,6 +1,8 @@
 import Chatbot from 'react-chatbot-kit'
 import './ChatSection.css';
 import InputField from './InputField';
+import SimpleBar from 'simplebar-react';
+import 'simplebar/dist/simplebar.min.css'
 
 
 
@@ -11,18 +13,21 @@ import ChatField from './ChatField';
 
 const onSubmitData=(data)=>{
     data.preventDefault();
-    const res = data.target.querySelector('textarea').value;
-    return res;
+    const response = data.target.querySelector('textarea').value;
+
+    return response;
 }
 
 const ChatSection = () => {
     return (
         <div className = "chatSection">
-            <ChatField />
-            <ChatField />
-            <ChatField mySend={true} />
-            <ChatField mySend={true} />
-            <InputField submitData={onSubmitData} />
+            {/* <SimpleBar  forceVisible="y" autoHide={false}> */}
+                <ChatField />
+                <ChatField />
+                <ChatField mySend={true} />
+                <ChatField mySend={true} />
+            {/* </SimpleBar> */}
+                <InputField submitData={onSubmitData} />
 
 
             {/* build chat app with react chatbot... Not what We Wanted */}
